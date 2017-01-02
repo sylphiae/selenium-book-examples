@@ -4,6 +4,7 @@ class Login
 	PASSWORD_INPUT = { id: 'password' }
 	SUBMIT_BUTTON = { css: 'button' }
 	SUCCESS_MESSAGE = { css: '.flash.success' }
+	FAILURE_MESSAGE = { css: '.flash.error' }
 
 	def initialize(driver)
 		@driver = driver
@@ -20,4 +21,8 @@ class Login
 	def success_message_present?
 		@driver.find_element(SUCCESS_MESSAGE).displayed?
 	end
+
+	def failure_message_present?
+		@driver.find_element(FAILURE_MESSAGE).displayed?
+	end 
 end 
