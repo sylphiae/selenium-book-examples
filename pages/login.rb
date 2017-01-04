@@ -20,14 +20,15 @@ class Login < BasePage
 		type username, USERNAME_INPUT
         type password, PASSWORD_INPUT
         click SUBMIT_BUTTON
-        sleep(1)
 	end 
 
 	def success_message_present?
+        wait_for(1) { is_displayed? SUCCESS_MESSAGE }
 	    is_displayed? SUCCESS_MESSAGE
 	end
 
 	def failure_message_present?
+        wait_for(1) { is_displayed? FAILURE_MESSAGE }
 	    is_displayed? FAILURE_MESSAGE
 	end 
 end 

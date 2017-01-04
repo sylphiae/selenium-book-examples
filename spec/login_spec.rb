@@ -1,5 +1,5 @@
 require 'selenium-webdriver'
-require_relative 'login' 
+require_relative '../pages/login' 
 
 describe 'Login' do 
 
